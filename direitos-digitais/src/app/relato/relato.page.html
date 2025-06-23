@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Relato de Violação</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-alert
+    [isOpen]="showAlert"
+    [message]="alertMessage"
+    [buttons]="['OK']"
+    (didDismiss)="onAlertDismiss()">
+  </ion-alert>
+
+  <form (ngSubmit)="enviarRelato()">
+    <ion-list>
+      <ion-item>
+        <ion-label>Tipo de violação:</ion-label>
+        <ion-select [(ngModel)]="relato.tipo_violacao" name="tipo_violacao" required>
+          <ion-select-option *ngFor="let tipo of tiposViolacao" [value]="tipo">{{ tipo }}</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Descrição (opcional):</ion-label>
+        <ion-textarea [(ngModel)]="relato.descricao" name="descricao" rows="5"></ion-textarea>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Faixa etária:</ion-label>
+        <ion-select [(ngModel)]="relato.faixa_etaria" name="faixa_etaria">
+          <ion-select-option value="Menos de 18 anos">Menos de 18 anos</ion-select-option>
+          <ion-select-option value="18-25 anos">18-25 anos</ion-select-option>
+          <ion-select-option value="26-35 anos">26-35 anos</ion-select-option>
+          <ion-select-option value="36-45 anos">36-45 anos</ion-select-option>
+          <ion-select-option value="46-60 anos">46-60 anos</ion-select-option>
+          <ion-select-option value="Mais de 60 anos">Mais de 60 anos</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Nível de escolaridade:</ion-label>
+        <ion-select [(ngModel)]="relato.nivel_escolaridade" name="nivel_escolaridade">
+          <ion-select-option value="Ensino Fundamental">Ensino Fundamental</ion-select-option>
+          <ion-select-option value="Ensino Médio">Ensino Médio</ion-select-option>
+          <ion-select-option value="Ensino Superior incompleto">Ensino Superior incompleto</ion-select-option>
+          <ion-select-option value="Ensino Superior completo">Ensino Superior completo</ion-select-option>
+          <ion-select-option value="Pós-graduação">Pós-graduação</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Gênero:</ion-label>
+        <ion-select [(ngModel)]="relato.genero" name="genero">
+          <ion-select-option value="Masculino">Masculino</ion-select-option>
+          <ion-select-option value="Feminino">Feminino</ion-select-option>
+          <ion-select-option value="Não especifico">Não especifico</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+    <ion-button type="submit" expand="block" color="primary">Enviar Relato</ion-button>
+  </form>
+</ion-content>

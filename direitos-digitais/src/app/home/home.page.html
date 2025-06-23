@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Direitos Digitais</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Projeto Acadêmico sobre Direitos Humanos e o Universo Digital</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Este aplicativo tem como objetivo conscientizar sobre os direitos humanos no ambiente digital e coletar dados para pesquisa acadêmica sobre violações nesse espaço.</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Violações Digitais</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <h3>Violência de Privacidade</h3>
+      <p>Ocorre quando informações pessoais são coletadas, compartilhadas ou utilizadas sem consentimento, expondo dados sensíveis e violando a intimidade do indivíduo.</p>
+      
+
+      <h3>Cyberbullying e Assédio Online</h3>
+      <p>Comportamentos agressivos e repetitivos realizados através de meios digitais, com intenção de humilhar, ameaçar ou constranger a vítima.</p>
+      
+
+      <h3>Ciberataques</h3>
+      <p>Ações maliciosas contra sistemas digitais, incluindo invasões, roubo de dados, sequestro de informações (ransomware) e interrupção de serviços.</p>
+      
+
+      <h3>Discurso de Ódio Online</h3>
+      <p>Manifestações que incitam violência, discriminação ou preconceito contra indivíduos ou grupos baseados em características como raça, gênero, religião, etc.</p>
+      
+
+      <h3>Fraudes e Crimes Financeiros</h3>
+      <p>Práticas enganosas para obter vantagens financeiras ilícitas, incluindo golpes, phishing, falsificação e roubo de identidade.</p>
+      
+
+      <h3>Manipulação de Informações e Desinformação</h3>
+      <p>Disseminação deliberada de informações falsas ou enganosas com o objetivo de manipular opiniões, comportamentos ou decisões.</p>
+      <ion-button expand="block" (click)="abrirLink()">Saiba mais</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Participe da Pesquisa</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Ajude-nos a entender melhor as violações de direitos humanos no ambiente digital respondendo ao nosso questionário anônimo.</p>
+      <ion-button expand="block" routerLink="/questionario" color="secondary">Responder Questionário</ion-button>
+      <ion-button expand="block" routerLink="/relato" color="tertiary">Relatar Violação</ion-button>
+      <ion-button expand="block" (click)="abrirDenuncia()" color="danger">Denunciar Crime</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Recursos Educacionais</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Acesse materiais educativos sobre direitos humanos no universo digital.</p>
+      <ion-button expand="block" routerLink="/recursos" color="success">Acessar Recursos</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Exemplo de botão para o Dashboard -->
+  <ion-button [routerLink]="['/dashboard']" expand="block" color="primary">
+    Ver Dashboard
+  </ion-button>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title size="small">Projeto Acadêmico sobre Direitos Humanos e o Universo Digital - © 2025 - Todos os direitos reservados</ion-title>
+    <ion-title size="small">Desenvolvido por Salatiel Muzi Martins - Curso Ciência da Computação (UNIG)</ion-title>
+  </ion-toolbar>
+</ion-footer>

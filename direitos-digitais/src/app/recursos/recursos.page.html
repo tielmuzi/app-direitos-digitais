@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Recursos Educacionais</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item>
+      <ion-icon name="document-text-outline" slot="start"></ion-icon>
+      <ion-label>Declaração Universal dos Direitos Humanos</ion-label>
+      <ion-button fill="clear" (click)="abrirLink('https://www.unicef.org/brazil/declaracao-universal-dos-direitos-humanos')">
+        Acessar
+      </ion-button>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="globe-outline" slot="start"></ion-icon>
+      <ion-label>Direitos Humanos na Era Digital - Jusbrasil</ion-label>
+      <ion-button fill="clear" (click)="abrirLink('https://www.jusbrasil.com.br/artigos/direitos-humanos-na-era-digital-desafios-e-perspectivas-para-a-protecao-dos-individuos/2181455433')">
+        Acessar
+      </ion-button>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="book-outline" slot="start"></ion-icon>
+      <ion-label>Guia de Segurança Digital - SaferNet</ion-label>
+      <ion-button fill="clear" (click)="abrirLink('https://new.safernet.org.br/?field_subject_value=Seguran%C3%A7a%20Digital&field_seguran_a_digital_value[]=Dados%20Pessoais&field_seguran_a_digital_value[]=Criptografia&field_seguran_a_digital_value[]=Senhas&field_seguran_a_digital_value[]=Compras%20Online&field_type_value=All')">
+        Acessar
+      </ion-button>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="school-outline" slot="start"></ion-icon>
+      <ion-label>Lei Geral de Proteção de Dados (LGPD) - Lei nº 13.709</ion-label>
+      <ion-button fill="clear" (click)="abrirLink('https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm')">
+        Acessar
+      </ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>
